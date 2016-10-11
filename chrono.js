@@ -2,6 +2,7 @@
     Chrono
     Descrição: Cronômetro com métodos start, stop, reset e getTime.
     Criado por Janderson costa em 10/10/2016.
+    Uso: ver demo.html
 */
 
 function Chrono() {
@@ -9,7 +10,7 @@ function Chrono() {
         H = 0,
         M = 0,
         S = 0,
-		interval;
+        interval;
 
     this.isStoped = true;
     this.isRunning = false;
