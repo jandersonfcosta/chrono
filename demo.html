@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Chrono</title>
+		<style>
+			.time {
+				font-size: 3em;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Chrono - Demo</h1>
+
+		<div class="time"></div> Ver console.
+
+		<script src="chrono.js"></script>
+		<script type="text/javascript">
+			var chrono = new Chrono();
+			//chrono.start(); // inicia do zero
+			chrono.start("57:59:45", function(time) { // continua a partir de um tempo definido com callback
+				console.log(time);
+				document.querySelector(".time").innerHTML = time;
+			});
+			//chrono.start("57:59");
+			//chrono.start("57");
+			chrono.getTime(); // retorna o tempo corrente
+			//chrono.stop(); // para a contagem
+			//chrono.reset(); // define o tempo para "00:00:00"
+		</script>
+	</body>
+</html>
